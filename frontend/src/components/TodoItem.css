@@ -1,0 +1,111 @@
+/* ==================== */
+/* Todo Item Styling    */
+/* ==================== */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* ==================== */
+  /* Custom Checkbox      */
+  /* ==================== */
+  .todo-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  
+  .todo-checkbox:checked {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+  }
+  
+  .todo-checkbox:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 3px;
+  }
+  
+  /* ==================== */
+  /* Todo Text            */
+  /* ==================== */
+  .todo-text {
+    flex: 1;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #333;
+  }
+  
+  .todo-text.done {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  /* ==================== */
+  /* Delete Button        */
+  /* ==================== */
+ /* Delete Button */
+.todo-delete-btn {
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 18px; /* lebih besar biar ikon jelas */
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .todo-delete-btn:hover {
+    background: #e60023;
+    transform: scale(1.15);
+  }
+  
+  
+  /* ==================== */
+  /* Dark Mode            */
+  /* ==================== */
+  .dark-mode .todo-item {
+    background: #2a2a2a;
+    border: 1px solid #444;
+  }
+  
+  .dark-mode .todo-text {
+    color: #ddd;
+  }
+  
+  .dark-mode .todo-text.done {
+    color: #777;
+  }
+  
+  .dark-mode .todo-checkbox {
+    border: 2px solid #00c6ff;
+  }
+  
+  .dark-mode .todo-delete-btn {
+    background: #ff3333;
+  }
+  
+  .dark-mode .todo-delete-btn:hover {
+    background: #cc0000;
+  }
+  

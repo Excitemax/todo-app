@@ -1,0 +1,21 @@
+# Gunakan Node.js base image
+FROM node:20
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json dan package-lock.json dulu (supaya cache npm install efisien)
+COPY package*.json ./
+
+# Set registry biar lebih stabil, lalu install dependencies
+RUN npm config set registry https://registry.npmjs.org/
+RUN npm install
+
+# Copy semua source code
+COPY . .
+
+# Expose port React default
+EXPOSE 3000
+
+# Jalankan React dev server
+CMD ["npm", "start"]
