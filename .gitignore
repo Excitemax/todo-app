@@ -1,0 +1,9 @@
+# frontend
+frontend/node_modules
+frontend/build
+
+
+# backend (misal Python)
+backend/__pycache__/
+
+/node_modules
